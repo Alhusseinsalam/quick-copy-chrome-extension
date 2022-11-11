@@ -1,0 +1,20 @@
+{
+    "name": "Copyboard",
+    "description": "An extension to hold data for quick copying",
+    "version":"1.0",
+    "manifest_version":3,
+    "background": {
+        "service_worker":"service_worker.js"
+    },
+    "content_scripts": [
+        {            
+            "matches": ["<all_urls>"],
+            "js": ["background.js"],
+            "css": ["style.css"]
+        }
+    ],
+    "permissions": ["storage"],
+    "action": {
+        "default_popup": "ui.html"
+    }
+}
